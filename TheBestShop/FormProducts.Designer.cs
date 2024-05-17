@@ -134,6 +134,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormProducts";
             this.Text = "FormProducts";
+            this.Load += new System.EventHandler(this.FormProducts_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

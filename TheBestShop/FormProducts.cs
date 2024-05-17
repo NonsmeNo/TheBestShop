@@ -67,6 +67,9 @@ namespace TheBestShop
             this.Close();
         }
 
-       
+        private void FormProducts_Load(object sender, EventArgs e)
+        {
+            cbNDS.SelectedIndex = 0;
+        }
     }
 }

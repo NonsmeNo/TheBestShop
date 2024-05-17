@@ -33,5 +33,38 @@ namespace TheBestShop
         {
 
         }
+
+        private DataTable GetProductsData()
+        {
+            DataTable productsData = new DataTable();
+
+            // Выполнение SQL-запроса для получения данных о товарах
+            using (NpgsqlCommand command = new NpgsqlCommand("SELECT name_prod FROM Products", con))
+            {
+                NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(command);
+                adapter.Fill(productsData);
+            }
+
+            return productsData;
+        }
+
+        
+
+        private void FormInvoices_Load(object sender, EventArgs e)
+        {
+            DataTable productsData = GetProductsData();
+
+            // Проверяем, что данные получены
+            if (productsData != null && productsData.Rows.Count > 0)
+            {
+                cbProd.Items.Clear();
+                foreach (DataRow row in productsData.Rows)
+                {
+                    string productName = row["name_prod"].ToString();
+                    cbProd.Items.Add(productName);
+                }
+                cbProd.SelectedIndex = 0;
+            }
+        }
     }
 }

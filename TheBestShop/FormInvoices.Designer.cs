@@ -34,15 +34,18 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.cbProd = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.domainUpDown2 = new System.Windows.Forms.DomainUpDown();
+            this.nudQuan = new System.Windows.Forms.NumericUpDown();
+            this.tbPaid = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbCustomer = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuan)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(155, 220);
+            this.btnAdd.Location = new System.Drawing.Point(155, 268);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 26);
@@ -53,7 +56,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(28, 220);
+            this.btnClose.Location = new System.Drawing.Point(28, 268);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 26);
@@ -65,7 +68,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 29);
+            this.label4.Location = new System.Drawing.Point(29, 19);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(158, 13);
@@ -74,7 +77,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(30, 45);
+            this.dateTimePicker1.Location = new System.Drawing.Point(30, 35);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 43;
@@ -87,7 +90,7 @@
             "10%",
             "15%",
             "20%"});
-            this.cbProd.Location = new System.Drawing.Point(28, 91);
+            this.cbProd.Location = new System.Drawing.Point(28, 124);
             this.cbProd.Name = "cbProd";
             this.cbProd.Size = new System.Drawing.Size(202, 21);
             this.cbProd.TabIndex = 44;
@@ -95,25 +98,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 75);
+            this.label1.Location = new System.Drawing.Point(25, 108);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 45;
             this.label1.Text = "Товар";
             // 
-            // domainUpDown1
-            // 
-            this.domainUpDown1.Location = new System.Drawing.Point(28, 139);
-            this.domainUpDown1.Name = "domainUpDown1";
-            this.domainUpDown1.Size = new System.Drawing.Size(101, 20);
-            this.domainUpDown1.TabIndex = 46;
-            this.domainUpDown1.Text = "domainUpDown1";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 123);
+            this.label2.Location = new System.Drawing.Point(29, 157);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 13);
@@ -123,30 +118,61 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 167);
+            this.label3.Location = new System.Drawing.Point(29, 218);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 13);
             this.label3.TabIndex = 49;
             this.label3.Text = "Оплаченная сумма";
             // 
-            // domainUpDown2
+            // nudQuan
             // 
-            this.domainUpDown2.Location = new System.Drawing.Point(28, 183);
-            this.domainUpDown2.Name = "domainUpDown2";
-            this.domainUpDown2.Size = new System.Drawing.Size(101, 20);
-            this.domainUpDown2.TabIndex = 48;
-            this.domainUpDown2.Text = "domainUpDown2";
+            this.nudQuan.Location = new System.Drawing.Point(30, 173);
+            this.nudQuan.Name = "nudQuan";
+            this.nudQuan.Size = new System.Drawing.Size(120, 20);
+            this.nudQuan.TabIndex = 50;
+            // 
+            // tbPaid
+            // 
+            this.tbPaid.Location = new System.Drawing.Point(28, 234);
+            this.tbPaid.Name = "tbPaid";
+            this.tbPaid.Size = new System.Drawing.Size(120, 20);
+            this.tbPaid.TabIndex = 51;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(25, 62);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 13);
+            this.label5.TabIndex = 53;
+            this.label5.Text = "Покупатель";
+            // 
+            // cbCustomer
+            // 
+            this.cbCustomer.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.cbCustomer.FormattingEnabled = true;
+            this.cbCustomer.Items.AddRange(new object[] {
+            "10%",
+            "15%",
+            "20%"});
+            this.cbCustomer.Location = new System.Drawing.Point(28, 78);
+            this.cbCustomer.Name = "cbCustomer";
+            this.cbCustomer.Size = new System.Drawing.Size(202, 21);
+            this.cbCustomer.TabIndex = 52;
             // 
             // FormInvoices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(279, 283);
+            this.ClientSize = new System.Drawing.Size(279, 332);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.cbCustomer);
+            this.Controls.Add(this.tbPaid);
+            this.Controls.Add(this.nudQuan);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.domainUpDown2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.domainUpDown1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbProd);
             this.Controls.Add(this.dateTimePicker1);
@@ -155,6 +181,8 @@
             this.Controls.Add(this.label4);
             this.Name = "FormInvoices";
             this.Text = "FormInvoices";
+            this.Load += new System.EventHandler(this.FormInvoices_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,9 +196,11 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox cbProd;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DomainUpDown domainUpDown1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DomainUpDown domainUpDown2;
+        private System.Windows.Forms.NumericUpDown nudQuan;
+        private System.Windows.Forms.TextBox tbPaid;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbCustomer;
     }
 }
