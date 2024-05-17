@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,17 +13,23 @@ namespace TheBestShop
 {
     public partial class FormInvoices : Form
     {
+        private NpgsqlConnection con;
+        private string conString =
+            "Host = 127.0.0.1; Username = postgres; Password = melman; Database = TheShop";
         public FormInvoices()
         {
             InitializeComponent();
+            con = new NpgsqlConnection(conString);
+            con.Open();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+
+        private void btnClose_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
-        private void domainUpDown2_SelectedItemChanged(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
 
         }

@@ -100,5 +100,10 @@ namespace TheBestShop
             NpgsqlDataAdapter adap = new NpgsqlDataAdapter("SELECT * FROM Products", con);
             adap.Fill(dt);
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

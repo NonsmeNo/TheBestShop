@@ -49,6 +49,7 @@
             this.btnAdd.TabIndex = 42;
             this.btnAdd.Text = "Добавить";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnClose
             // 
@@ -59,6 +60,7 @@
             this.btnClose.TabIndex = 41;
             this.btnClose.Text = "Закрыть";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // label4
             // 
@@ -127,7 +129,6 @@
             this.label3.Size = new System.Drawing.Size(104, 13);
             this.label3.TabIndex = 49;
             this.label3.Text = "Оплаченная сумма";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // domainUpDown2
             // 
@@ -136,7 +137,6 @@
             this.domainUpDown2.Size = new System.Drawing.Size(101, 20);
             this.domainUpDown2.TabIndex = 48;
             this.domainUpDown2.Text = "domainUpDown2";
-            this.domainUpDown2.SelectedItemChanged += new System.EventHandler(this.domainUpDown2_SelectedItemChanged);
             // 
             // FormInvoices
             // 

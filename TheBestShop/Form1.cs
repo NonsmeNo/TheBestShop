@@ -115,12 +115,21 @@ namespace TheBestShop
 
         private void buttonDel2_Click(object sender, EventArgs e)
         {
+            string sql = $"DELETE FROM Products WHERE id=(@id)";
+            NpgsqlCommand cmd = new NpgsqlCommand(sql, con);
+            int id = int.Parse(dataGridView2.CurrentRow.Cells[0].Value.ToString());
+            cmd.Parameters.AddWithValue("id", id);
+            cmd.Prepare();
+            cmd.ExecuteNonQuery();
 
+            loadProducts();
         }
 
         private void buttonAdd3_Click(object sender, EventArgs e)
         {
-
+            FormInvoices f = new FormInvoices();
+            f.ShowDialog();
+            loadInvoices();
         }
 
         private void buttonChange3_Click(object sender, EventArgs e)
