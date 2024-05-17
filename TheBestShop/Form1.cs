@@ -54,18 +54,19 @@ namespace TheBestShop
 
         private void buttonChange_Click(object sender, EventArgs e)
         {
-
-            if (dataGridView1.SelectedRows.Count == 0)
+            if (dataGridView1.SelectedCells.Count == 0)
             {
-                MessageBox.Show("Выберите строку для изменения.");
+                MessageBox.Show("Выберите ячейку для изменения.");
                 return;
             }
 
-            DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+            DataGridViewCell selectedCell = dataGridView1.SelectedCells[0];
+            DataGridViewRow selectedRow = dataGridView1.Rows[selectedCell.RowIndex];
             FormCustomersChange f = new FormCustomersChange();
             f.SelectedRow = selectedRow;
             f.ShowDialog();
             loadCustomers();
+
         }
 
         private void chart2_Click(object sender, EventArgs e)
