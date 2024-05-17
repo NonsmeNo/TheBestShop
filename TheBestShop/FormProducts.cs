@@ -34,6 +34,7 @@ namespace TheBestShop
         {
             string sql1 = "INSERT INTO Products(name_prod, cost_prod, nds) VALUES(@name, @cost, @nds)";
             NpgsqlCommand cmd1 = new NpgsqlCommand(sql1, con);
+
             cmd1.Parameters.AddWithValue("name", this.tbnameProd.Text);
 
             string costString = this.tbCost.Text;
@@ -47,9 +48,6 @@ namespace TheBestShop
                 MessageBox.Show("Неверный формат ввода стоимости. Пожалуйста, введите число.");
                 
             }
-
-
-
             string ndsString = this.cbNDS.Text;
             string ndsValueString = ndsString.Replace("%", "");
             float ndsValue;
@@ -69,9 +67,6 @@ namespace TheBestShop
             this.Close();
         }
 
-        private void FormCustomers_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

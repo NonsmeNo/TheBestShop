@@ -106,7 +106,7 @@ namespace TheBestShop
             }
 
             DataGridViewCell selectedCell = dataGridView2.SelectedCells[0];
-            DataGridViewRow selectedRow = dataGridView1.Rows[selectedCell.RowIndex];
+            DataGridViewRow selectedRow = dataGridView2.Rows[selectedCell.RowIndex];
             FormProductsChange f = new FormProductsChange();
             f.SelectedRow = selectedRow;
             f.ShowDialog();

@@ -30,7 +30,7 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.cbNDS = new System.Windows.Forms.ComboBox();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnChage = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.tbnameProd = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -63,15 +63,16 @@
             this.cbNDS.Size = new System.Drawing.Size(209, 21);
             this.cbNDS.TabIndex = 51;
             // 
-            // btnAdd
+            // btnChage
             // 
-            this.btnAdd.Location = new System.Drawing.Point(157, 227);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 26);
-            this.btnAdd.TabIndex = 50;
-            this.btnAdd.Text = "Добавить";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnChage.Location = new System.Drawing.Point(157, 227);
+            this.btnChage.Margin = new System.Windows.Forms.Padding(2);
+            this.btnChage.Name = "btnChage";
+            this.btnChage.Size = new System.Drawing.Size(75, 26);
+            this.btnChage.TabIndex = 50;
+            this.btnChage.Text = "Добавить";
+            this.btnChage.UseVisualStyleBackColor = true;
+            this.btnChage.Click += new System.EventHandler(this.btnChage_Click);
             // 
             // btnClose
             // 
@@ -146,7 +147,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbNDS);
-            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnChage);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tbnameProd);
             this.Controls.Add(this.label4);
@@ -164,7 +165,7 @@
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbNDS;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnChage;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.TextBox tbnameProd;
         private System.Windows.Forms.Label label4;
