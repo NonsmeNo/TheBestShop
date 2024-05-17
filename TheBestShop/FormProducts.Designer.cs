@@ -40,23 +40,25 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(138, 208);
+            this.btnAdd.Location = new System.Drawing.Point(158, 208);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 26);
             this.btnAdd.TabIndex = 42;
             this.btnAdd.Text = "Добавить";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(40, 208);
+            this.btnClose.Location = new System.Drawing.Point(24, 208);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 26);
             this.btnClose.TabIndex = 41;
             this.btnClose.Text = "Закрыть";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // tbnameProd
             // 

@@ -52,11 +52,20 @@ namespace TheBestShop
             dataGridView3.DataSource = dt;
         }
 
-        private void buttonChange_Click(object sender, EventArgs e)
+
+
+        private void buttonAdd1_Click(object sender, EventArgs e)
+        {
+            FormCustomers f = new FormCustomers();
+            f.ShowDialog();
+            loadCustomers();
+        }
+
+        private void buttonChange1_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedCells.Count == 0)
             {
-                MessageBox.Show("Выберите ячейку для изменения.");
+                MessageBox.Show("Выберите покупателя для изменения.");
                 return;
             }
 
@@ -64,24 +73,6 @@ namespace TheBestShop
             DataGridViewRow selectedRow = dataGridView1.Rows[selectedCell.RowIndex];
             FormCustomersChange f = new FormCustomersChange();
             f.SelectedRow = selectedRow;
-            f.ShowDialog();
-            loadCustomers();
-
-        }
-
-        private void chart2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Customers_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonAdd1_Click(object sender, EventArgs e)
-        {
-            FormCustomers f = new FormCustomers();
             f.ShowDialog();
             loadCustomers();
         }
@@ -105,7 +96,39 @@ namespace TheBestShop
             loadProducts();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+
+        private void buttonСhange2_Click(object sender, EventArgs e)
+        {
+            if (dataGridView2.SelectedCells.Count == 0)
+            {
+                MessageBox.Show("Выберите товар для изменения.");
+                return;
+            }
+
+            DataGridViewCell selectedCell = dataGridView2.SelectedCells[0];
+            DataGridViewRow selectedRow = dataGridView1.Rows[selectedCell.RowIndex];
+            FormProductsChange f = new FormProductsChange();
+            f.SelectedRow = selectedRow;
+            f.ShowDialog();
+            loadProducts();
+        }
+
+        private void buttonDel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAdd3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonChange3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDel3_Click(object sender, EventArgs e)
         {
 
         }

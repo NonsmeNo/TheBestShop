@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Customers = new System.Windows.Forms.TabPage();
             this.buttonDel1 = new System.Windows.Forms.Button();
@@ -51,22 +51,22 @@
             this.buttonAdd3 = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.Report = new System.Windows.Forms.TabPage();
-            this.Invoices = new System.Windows.Forms.TabPage();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.dtpStart = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.buttoтReport1 = new System.Windows.Forms.Button();
-            this.buttonReport2 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dtpEnd = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.buttonReport2 = new System.Windows.Forms.Button();
+            this.dtpStart = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttoтReport1 = new System.Windows.Forms.Button();
+            this.Invoices = new System.Windows.Forms.TabPage();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tabControl1.SuspendLayout();
             this.Customers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -75,8 +75,8 @@
             this.Invoices1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.Report.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -105,7 +105,6 @@
             this.Customers.Size = new System.Drawing.Size(717, 381);
             this.Customers.TabIndex = 0;
             this.Customers.Text = "Покупатели";
-            this.Customers.Click += new System.EventHandler(this.Customers_Click);
             // 
             // buttonDel1
             // 
@@ -127,7 +126,7 @@
             this.buttonChange1.TabIndex = 2;
             this.buttonChange1.Text = "ИЗМЕНИТЬ";
             this.buttonChange1.UseVisualStyleBackColor = false;
-            this.buttonChange1.Click += new System.EventHandler(this.buttonChange_Click);
+            this.buttonChange1.Click += new System.EventHandler(this.buttonChange1_Click);
             // 
             // buttonAdd1
             // 
@@ -172,6 +171,7 @@
             this.buttonDel2.TabIndex = 7;
             this.buttonDel2.Text = "УДАЛИТЬ";
             this.buttonDel2.UseVisualStyleBackColor = false;
+            this.buttonDel2.Click += new System.EventHandler(this.buttonDel2_Click);
             // 
             // buttonChange2
             // 
@@ -182,6 +182,7 @@
             this.buttonChange2.TabIndex = 6;
             this.buttonChange2.Text = "ИЗМЕНИТЬ";
             this.buttonChange2.UseVisualStyleBackColor = false;
+            this.buttonChange2.Click += new System.EventHandler(this.buttonСhange2_Click);
             // 
             // buttonAdd2
             // 
@@ -225,6 +226,7 @@
             this.buttonDel3.TabIndex = 11;
             this.buttonDel3.Text = "УДАЛИТЬ";
             this.buttonDel3.UseVisualStyleBackColor = false;
+            this.buttonDel3.Click += new System.EventHandler(this.buttonDel3_Click);
             // 
             // buttonChange3
             // 
@@ -235,6 +237,7 @@
             this.buttonChange3.TabIndex = 10;
             this.buttonChange3.Text = "ИЗМЕНИТЬ";
             this.buttonChange3.UseVisualStyleBackColor = false;
+            this.buttonChange3.Click += new System.EventHandler(this.buttonChange3_Click);
             // 
             // buttonAdd3
             // 
@@ -245,6 +248,7 @@
             this.buttonAdd3.TabIndex = 9;
             this.buttonAdd3.Text = "ДОБАВИТЬ";
             this.buttonAdd3.UseVisualStyleBackColor = false;
+            this.buttonAdd3.Click += new System.EventHandler(this.buttonAdd3_Click);
             // 
             // dataGridView3
             // 
@@ -278,97 +282,41 @@
             this.Report.Text = "Отчет";
             this.Report.UseVisualStyleBackColor = true;
             // 
-            // Invoices
+            // chart2
             // 
-            this.Invoices.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Invoices.Location = new System.Drawing.Point(4, 29);
-            this.Invoices.Name = "Invoices";
-            this.Invoices.Size = new System.Drawing.Size(717, 386);
-            this.Invoices.TabIndex = 2;
-            this.Invoices.Text = "Счета-фактуры";
+            chartArea5.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chart2.Legends.Add(legend5);
+            this.chart2.Location = new System.Drawing.Point(380, 164);
+            this.chart2.Margin = new System.Windows.Forms.Padding(2);
+            this.chart2.Name = "chart2";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chart2.Series.Add(series5);
+            this.chart2.Size = new System.Drawing.Size(240, 184);
+            this.chart2.TabIndex = 23;
+            this.chart2.Text = "chart2";
             // 
-            // dtpStart
+            // chart1
             // 
-            this.dtpStart.Location = new System.Drawing.Point(34, 73);
-            this.dtpStart.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpStart.Name = "dtpStart";
-            this.dtpStart.Size = new System.Drawing.Size(170, 20);
-            this.dtpStart.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 59);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Дата";
-            // 
-            // buttoтReport1
-            // 
-            this.buttoтReport1.Location = new System.Drawing.Point(34, 106);
-            this.buttoтReport1.Margin = new System.Windows.Forms.Padding(2);
-            this.buttoтReport1.Name = "buttoтReport1";
-            this.buttoтReport1.Size = new System.Drawing.Size(100, 36);
-            this.buttoтReport1.TabIndex = 7;
-            this.buttoтReport1.Text = "Сформировать отчёт";
-            this.buttoтReport1.UseVisualStyleBackColor = true;
-            // 
-            // buttonReport2
-            // 
-            this.buttonReport2.Location = new System.Drawing.Point(579, 104);
-            this.buttonReport2.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonReport2.Name = "buttonReport2";
-            this.buttonReport2.Size = new System.Drawing.Size(100, 36);
-            this.buttonReport2.TabIndex = 13;
-            this.buttonReport2.Text = "Сформировать отчёт";
-            this.buttonReport2.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(31, 20);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(156, 16);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Cписок счётов-фактур";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(31, 36);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(227, 16);
-            this.label4.TabIndex = 15;
-            this.label4.Text = " по которым просрочены платежи";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(377, 20);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(264, 16);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Соотношение сумм проданных товаров";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(377, 36);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(228, 16);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "  пропорционально их ставок НДС";
+            chartArea6.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chart1.Legends.Add(legend6);
+            this.chart1.Location = new System.Drawing.Point(34, 164);
+            this.chart1.Margin = new System.Windows.Forms.Padding(2);
+            this.chart1.Name = "chart1";
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chart1.Series.Add(series6);
+            this.chart1.Size = new System.Drawing.Size(240, 184);
+            this.chart1.TabIndex = 22;
+            this.chart1.Text = "chart1";
             // 
             // dtpEnd
             // 
@@ -406,41 +354,96 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "Начало периода";
             // 
-            // chart1
+            // label5
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(34, 164);
-            this.chart1.Margin = new System.Windows.Forms.Padding(2);
-            this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(240, 184);
-            this.chart1.TabIndex = 22;
-            this.chart1.Text = "chart1";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(377, 36);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(228, 16);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "  пропорционально их ставок НДС";
             // 
-            // chart2
+            // label2
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart2.Legends.Add(legend1);
-            this.chart2.Location = new System.Drawing.Point(380, 164);
-            this.chart2.Margin = new System.Windows.Forms.Padding(2);
-            this.chart2.Name = "chart2";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart2.Series.Add(series1);
-            this.chart2.Size = new System.Drawing.Size(240, 184);
-            this.chart2.TabIndex = 23;
-            this.chart2.Text = "chart2";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(377, 20);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(264, 16);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Соотношение сумм проданных товаров";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(31, 36);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(227, 16);
+            this.label4.TabIndex = 15;
+            this.label4.Text = " по которым просрочены платежи";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(31, 20);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(156, 16);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Cписок счётов-фактур";
+            // 
+            // buttonReport2
+            // 
+            this.buttonReport2.Location = new System.Drawing.Point(579, 104);
+            this.buttonReport2.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonReport2.Name = "buttonReport2";
+            this.buttonReport2.Size = new System.Drawing.Size(100, 36);
+            this.buttonReport2.TabIndex = 13;
+            this.buttonReport2.Text = "Сформировать отчёт";
+            this.buttonReport2.UseVisualStyleBackColor = true;
+            // 
+            // dtpStart
+            // 
+            this.dtpStart.Location = new System.Drawing.Point(34, 73);
+            this.dtpStart.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpStart.Name = "dtpStart";
+            this.dtpStart.Size = new System.Drawing.Size(170, 20);
+            this.dtpStart.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(31, 59);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Дата";
+            // 
+            // buttoтReport1
+            // 
+            this.buttoтReport1.Location = new System.Drawing.Point(34, 106);
+            this.buttoтReport1.Margin = new System.Windows.Forms.Padding(2);
+            this.buttoтReport1.Name = "buttoтReport1";
+            this.buttoтReport1.Size = new System.Drawing.Size(100, 36);
+            this.buttoтReport1.TabIndex = 7;
+            this.buttoтReport1.Text = "Сформировать отчёт";
+            this.buttoтReport1.UseVisualStyleBackColor = true;
+            // 
+            // Invoices
+            // 
+            this.Invoices.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Invoices.Location = new System.Drawing.Point(4, 29);
+            this.Invoices.Name = "Invoices";
+            this.Invoices.Size = new System.Drawing.Size(717, 386);
+            this.Invoices.TabIndex = 2;
+            this.Invoices.Text = "Счета-фактуры";
             // 
             // Form1
             // 
@@ -459,8 +462,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.Report.ResumeLayout(false);
             this.Report.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
