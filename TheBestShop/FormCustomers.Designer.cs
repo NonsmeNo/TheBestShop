@@ -173,7 +173,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormCustomers";
             this.Tag = "label7";
-            this.Text = "FormCustomers";
+            this.Text = "Добавление покупателя";
             this.Load += new System.EventHandler(this.FormCustomers_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

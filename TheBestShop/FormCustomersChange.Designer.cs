@@ -194,7 +194,7 @@
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.label1);
             this.Name = "FormCustomersChange";
-            this.Text = "FormCustomersChange";
+            this.Text = "Изменение покупателя";
             this.Load += new System.EventHandler(this.FormCustomersChange_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

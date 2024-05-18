@@ -70,7 +70,7 @@
             this.btnChage.Name = "btnChage";
             this.btnChage.Size = new System.Drawing.Size(75, 26);
             this.btnChage.TabIndex = 50;
-            this.btnChage.Text = "Добавить";
+            this.btnChage.Text = "Изменить";
             this.btnChage.UseVisualStyleBackColor = true;
             this.btnChage.Click += new System.EventHandler(this.btnChage_Click);
             // 
@@ -155,7 +155,7 @@
             this.Controls.Add(this.tbCost);
             this.Controls.Add(this.label1);
             this.Name = "FormProductsChange";
-            this.Text = "FormProductsChange";
+            this.Text = "Изменение товара";
             this.Load += new System.EventHandler(this.FormProductsChange_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

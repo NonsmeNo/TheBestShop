@@ -48,7 +48,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 139);
+            this.label1.Location = new System.Drawing.Point(30, 139);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
@@ -63,21 +63,21 @@
             "10%",
             "15%",
             "20%"});
-            this.cbProd.Location = new System.Drawing.Point(22, 155);
+            this.cbProd.Location = new System.Drawing.Point(33, 155);
             this.cbProd.Name = "cbProd";
             this.cbProd.Size = new System.Drawing.Size(202, 21);
             this.cbProd.TabIndex = 54;
             // 
             // dtpInv
             // 
-            this.dtpInv.Location = new System.Drawing.Point(24, 66);
+            this.dtpInv.Location = new System.Drawing.Point(35, 66);
             this.dtpInv.Name = "dtpInv";
             this.dtpInv.Size = new System.Drawing.Size(200, 20);
             this.dtpInv.TabIndex = 53;
             // 
             // btnChange
             // 
-            this.btnChange.Location = new System.Drawing.Point(149, 297);
+            this.btnChange.Location = new System.Drawing.Point(160, 297);
             this.btnChange.Margin = new System.Windows.Forms.Padding(2);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(75, 26);
@@ -88,7 +88,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(26, 297);
+            this.btnClose.Location = new System.Drawing.Point(37, 297);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 26);
@@ -100,7 +100,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 50);
+            this.label4.Location = new System.Drawing.Point(34, 50);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(158, 13);
@@ -110,7 +110,7 @@
             // labelid
             // 
             this.labelid.AutoSize = true;
-            this.labelid.Location = new System.Drawing.Point(96, 24);
+            this.labelid.Location = new System.Drawing.Point(107, 24);
             this.labelid.Name = "labelid";
             this.labelid.Size = new System.Drawing.Size(15, 13);
             this.labelid.TabIndex = 61;
@@ -119,7 +119,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 24);
+            this.label5.Location = new System.Drawing.Point(32, 24);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 13);
             this.label5.TabIndex = 60;
@@ -128,7 +128,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 99);
+            this.label6.Location = new System.Drawing.Point(30, 99);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 13);
@@ -143,21 +143,21 @@
             "10%",
             "15%",
             "20%"});
-            this.cbCustomer.Location = new System.Drawing.Point(22, 115);
+            this.cbCustomer.Location = new System.Drawing.Point(33, 115);
             this.cbCustomer.Name = "cbCustomer";
             this.cbCustomer.Size = new System.Drawing.Size(202, 21);
             this.cbCustomer.TabIndex = 62;
             // 
             // tbPaid
             // 
-            this.tbPaid.Location = new System.Drawing.Point(22, 257);
+            this.tbPaid.Location = new System.Drawing.Point(33, 257);
             this.tbPaid.Name = "tbPaid";
             this.tbPaid.Size = new System.Drawing.Size(120, 20);
             this.tbPaid.TabIndex = 67;
             // 
             // nudQuan
             // 
-            this.nudQuan.Location = new System.Drawing.Point(24, 201);
+            this.nudQuan.Location = new System.Drawing.Point(35, 201);
             this.nudQuan.Name = "nudQuan";
             this.nudQuan.Size = new System.Drawing.Size(120, 20);
             this.nudQuan.TabIndex = 66;
@@ -165,7 +165,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 241);
+            this.label3.Location = new System.Drawing.Point(34, 241);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 13);
@@ -175,7 +175,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 185);
+            this.label2.Location = new System.Drawing.Point(34, 185);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 13);
@@ -186,7 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(249, 352);
+            this.ClientSize = new System.Drawing.Size(286, 352);
             this.Controls.Add(this.tbPaid);
             this.Controls.Add(this.nudQuan);
             this.Controls.Add(this.label3);
@@ -202,7 +202,7 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label4);
             this.Name = "FormInvoicesChange";
-            this.Text = "FormInvoicesChange";
+            this.Text = "Изменение счета-фактуры";
             this.Load += new System.EventHandler(this.FormInvoicesChange_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudQuan)).EndInit();
             this.ResumeLayout(false);

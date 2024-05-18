@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Customers = new System.Windows.Forms.TabPage();
             this.buttonDel1 = new System.Windows.Forms.Button();
@@ -53,8 +55,8 @@
             this.Report = new System.Windows.Forms.TabPage();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.dtpEnd = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateEnd = new System.Windows.Forms.DateTimePicker();
+            this.dateStart = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -62,9 +64,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonReport2 = new System.Windows.Forms.Button();
-            this.dtpStart = new System.Windows.Forms.DateTimePicker();
+            this.dtpCur = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttoтReport1 = new System.Windows.Forms.Button();
+            this.buttonReport1 = new System.Windows.Forms.Button();
             this.Invoices = new System.Windows.Forms.TabPage();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tabControl1.SuspendLayout();
@@ -263,8 +265,8 @@
             // 
             this.Report.Controls.Add(this.chart2);
             this.Report.Controls.Add(this.chart1);
-            this.Report.Controls.Add(this.dtpEnd);
-            this.Report.Controls.Add(this.dateTimePicker1);
+            this.Report.Controls.Add(this.dateEnd);
+            this.Report.Controls.Add(this.dateStart);
             this.Report.Controls.Add(this.label6);
             this.Report.Controls.Add(this.label7);
             this.Report.Controls.Add(this.label5);
@@ -272,9 +274,9 @@
             this.Report.Controls.Add(this.label4);
             this.Report.Controls.Add(this.label3);
             this.Report.Controls.Add(this.buttonReport2);
-            this.Report.Controls.Add(this.dtpStart);
+            this.Report.Controls.Add(this.dtpCur);
             this.Report.Controls.Add(this.label1);
-            this.Report.Controls.Add(this.buttoтReport1);
+            this.Report.Controls.Add(this.buttonReport1);
             this.Report.Location = new System.Drawing.Point(4, 34);
             this.Report.Name = "Report";
             this.Report.Size = new System.Drawing.Size(717, 381);
@@ -284,55 +286,61 @@
             // 
             // chart2
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chart2.Legends.Add(legend5);
+            chartArea3.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart2.Legends.Add(legend3);
             this.chart2.Location = new System.Drawing.Point(380, 164);
             this.chart2.Margin = new System.Windows.Forms.Padding(2);
             this.chart2.Name = "chart2";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chart2.Series.Add(series5);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chart2.Series.Add(series3);
             this.chart2.Size = new System.Drawing.Size(240, 184);
             this.chart2.TabIndex = 23;
             this.chart2.Text = "chart2";
+            title3.Name = "Title1";
+            title3.Text = "Соотношение сумм проданных товаров пропорционально их ставок НДС";
+            this.chart2.Titles.Add(title3);
             // 
             // chart1
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chart1.Legends.Add(legend6);
+            chartArea4.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart1.Legends.Add(legend4);
             this.chart1.Location = new System.Drawing.Point(34, 164);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chart1.Series.Add(series6);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart1.Series.Add(series4);
             this.chart1.Size = new System.Drawing.Size(240, 184);
             this.chart1.TabIndex = 22;
             this.chart1.Text = "chart1";
+            title4.Name = "Title1";
+            title4.Text = "Номера счетов-фактур с просроченными платежами";
+            this.chart1.Titles.Add(title4);
             // 
-            // dtpEnd
+            // dateEnd
             // 
-            this.dtpEnd.Location = new System.Drawing.Point(380, 120);
-            this.dtpEnd.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpEnd.Name = "dtpEnd";
-            this.dtpEnd.Size = new System.Drawing.Size(170, 20);
-            this.dtpEnd.TabIndex = 21;
+            this.dateEnd.Location = new System.Drawing.Point(380, 120);
+            this.dateEnd.Margin = new System.Windows.Forms.Padding(2);
+            this.dateEnd.Name = "dateEnd";
+            this.dateEnd.Size = new System.Drawing.Size(170, 20);
+            this.dateEnd.TabIndex = 21;
             // 
-            // dateTimePicker1
+            // dateStart
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(380, 73);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(170, 20);
-            this.dateTimePicker1.TabIndex = 20;
+            this.dateStart.Location = new System.Drawing.Point(380, 73);
+            this.dateStart.Margin = new System.Windows.Forms.Padding(2);
+            this.dateStart.Name = "dateStart";
+            this.dateStart.Size = new System.Drawing.Size(170, 20);
+            this.dateStart.TabIndex = 20;
             // 
             // label6
             // 
@@ -407,14 +415,15 @@
             this.buttonReport2.TabIndex = 13;
             this.buttonReport2.Text = "Сформировать отчёт";
             this.buttonReport2.UseVisualStyleBackColor = true;
+            this.buttonReport2.Click += new System.EventHandler(this.buttonReport2_Click);
             // 
-            // dtpStart
+            // dtpCur
             // 
-            this.dtpStart.Location = new System.Drawing.Point(34, 73);
-            this.dtpStart.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpStart.Name = "dtpStart";
-            this.dtpStart.Size = new System.Drawing.Size(170, 20);
-            this.dtpStart.TabIndex = 11;
+            this.dtpCur.Location = new System.Drawing.Point(34, 73);
+            this.dtpCur.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpCur.Name = "dtpCur";
+            this.dtpCur.Size = new System.Drawing.Size(170, 20);
+            this.dtpCur.TabIndex = 11;
             // 
             // label1
             // 
@@ -426,15 +435,16 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Дата";
             // 
-            // buttoтReport1
+            // buttonReport1
             // 
-            this.buttoтReport1.Location = new System.Drawing.Point(34, 106);
-            this.buttoтReport1.Margin = new System.Windows.Forms.Padding(2);
-            this.buttoтReport1.Name = "buttoтReport1";
-            this.buttoтReport1.Size = new System.Drawing.Size(100, 36);
-            this.buttoтReport1.TabIndex = 7;
-            this.buttoтReport1.Text = "Сформировать отчёт";
-            this.buttoтReport1.UseVisualStyleBackColor = true;
+            this.buttonReport1.Location = new System.Drawing.Point(34, 106);
+            this.buttonReport1.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonReport1.Name = "buttonReport1";
+            this.buttonReport1.Size = new System.Drawing.Size(100, 36);
+            this.buttonReport1.TabIndex = 7;
+            this.buttonReport1.Text = "Сформировать отчёт";
+            this.buttonReport1.UseVisualStyleBackColor = true;
+            this.buttonReport1.Click += new System.EventHandler(this.buttonReport1_Click);
             // 
             // Invoices
             // 
@@ -452,7 +462,7 @@
             this.ClientSize = new System.Drawing.Size(749, 443);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Магазин";
             this.tabControl1.ResumeLayout(false);
             this.Customers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -489,17 +499,17 @@
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.TabPage Report;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.DateTimePicker dtpStart;
+        private System.Windows.Forms.DateTimePicker dtpCur;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttoтReport1;
+        private System.Windows.Forms.Button buttonReport1;
         private System.Windows.Forms.Button buttonReport2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.DateTimePicker dtpEnd;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateEnd;
+        private System.Windows.Forms.DateTimePicker dateStart;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;

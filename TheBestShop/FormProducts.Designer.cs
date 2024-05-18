@@ -133,7 +133,7 @@
             this.Controls.Add(this.tbCost);
             this.Controls.Add(this.label1);
             this.Name = "FormProducts";
-            this.Text = "FormProducts";
+            this.Text = "Добавление товара";
             this.Load += new System.EventHandler(this.FormProducts_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
