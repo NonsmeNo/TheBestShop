@@ -87,6 +87,7 @@ namespace TheBestShop
             cmd.ExecuteNonQuery();
 
             loadCustomers();
+            loadInvoices();
         }
 
         private void buttonAdd2_Click(object sender, EventArgs e)
@@ -123,6 +124,7 @@ namespace TheBestShop
             cmd.ExecuteNonQuery();
 
             loadProducts();
+            loadInvoices();
         }
 
         private void buttonAdd3_Click(object sender, EventArgs e)
@@ -134,12 +136,30 @@ namespace TheBestShop
 
         private void buttonChange3_Click(object sender, EventArgs e)
         {
+            if (dataGridView3.SelectedCells.Count == 0)
+            {
+                MessageBox.Show("Выберите счет-фактуру для изменения.");
+                return;
+            }
 
+            DataGridViewCell selectedCell = dataGridView3.SelectedCells[0];
+            DataGridViewRow selectedRow = dataGridView3.Rows[selectedCell.RowIndex];
+            FormInvoicesChange f = new FormInvoicesChange();
+            f.SelectedRow = selectedRow;
+            f.ShowDialog();
+            loadInvoices();
         }
 
         private void buttonDel3_Click(object sender, EventArgs e)
         {
+            string sql = $"DELETE FROM Invoices WHERE id=(@id)";
+            NpgsqlCommand cmd = new NpgsqlCommand(sql, con);
+            int id = int.Parse(dataGridView3.CurrentRow.Cells[0].Value.ToString());
+            cmd.Parameters.AddWithValue("id", id);
+            cmd.Prepare();
+            cmd.ExecuteNonQuery();
 
+            loadInvoices();
         }
     }
 }

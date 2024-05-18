@@ -21,6 +21,26 @@ namespace TheBestShop
             InitializeComponent();
             con = new NpgsqlConnection(conString);
             con.Open();
+
+            string sql = "SELECT lastname, firstname, patronym FROM Customers";
+            NpgsqlCommand cmd = new NpgsqlCommand(sql, con);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            cbCustomer.Items.Clear();
+            while (reader.Read())
+            {
+                cbCustomer.Items.Add(reader.GetString(0) + " " + reader.GetString(1) + " " + reader.GetString(2));
+            }
+            reader.Close();
+
+            string sql1 = "SELECT name_prod FROM products";
+            NpgsqlCommand cmd1 = new NpgsqlCommand(sql1, con);
+            NpgsqlDataReader reader1 = cmd1.ExecuteReader();
+            cbProd.Items.Clear();
+            while (reader1.Read())
+            {
+                cbProd.Items.Add(reader1.GetString(0));
+            }
+            reader1.Close();
         }
 
 
@@ -31,40 +51,61 @@ namespace TheBestShop
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private DataTable GetProductsData()
-        {
-            DataTable productsData = new DataTable();
-
-            // Выполнение SQL-запроса для получения данных о товарах
-            using (NpgsqlCommand command = new NpgsqlCommand("SELECT name_prod FROM Products", con))
+            string sql = "SELECT id, lastname, firstname, patronym FROM Customers";
+            NpgsqlCommand cmd = new NpgsqlCommand(sql, con);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            int customer_id = 0;
+            while (reader.Read())
             {
-                NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(command);
-                adapter.Fill(productsData);
+                //comboBoxTour.Items.Add(reader.GetString(0));
+                if (cbCustomer.SelectedItem.ToString() == reader.GetString(1) + " " + reader.GetString(2) + " " + reader.GetString(3))
+                {
+                    customer_id = Convert.ToInt32(reader.GetValue(0));
+                }
             }
+            reader.Close();
 
-            return productsData;
+            string sql1 = "SELECT id, name_prod FROM products";
+            NpgsqlCommand cmd1 = new NpgsqlCommand(sql1, con);
+            NpgsqlDataReader reader1 = cmd1.ExecuteReader();
+            int product_id = 0;
+            while (reader1.Read())
+            {
+                //comboBoxTour.Items.Add(reader.GetString(0));
+                if (cbProd.SelectedItem.ToString() == reader1.GetString(1))
+                {
+                    product_id = Convert.ToInt32(reader1.GetValue(0));
+                }
+            }
+            reader1.Close();
+
+            string sql2 = "INSERT INTO Invoices(invoice_date, payment_date, paid, quantity, customer_id, product_id) VALUES(@invoice_date, @payment_date, @paid, @quantity, @customer_id, @product_id)";
+            NpgsqlCommand cmd2 = new NpgsqlCommand(sql2, con);
+
+            DateTime invoiceDate = this.dtpInv.Value;
+            DateTime paymentDate = invoiceDate.AddDays(20);
+            cmd2.Parameters.AddWithValue("invoice_date", invoiceDate);
+            cmd2.Parameters.AddWithValue("payment_date", paymentDate);
+
+            cmd2.Parameters.AddWithValue("quantity", int.Parse(this.nudQuan.Value.ToString()));
+            cmd2.Parameters.AddWithValue("paid", float.Parse(this.tbPaid.Text));
+            cmd2.Parameters.AddWithValue("customer_id", customer_id);
+            cmd2.Parameters.AddWithValue("product_id", product_id);
+            cmd2.Prepare();
+            cmd2.ExecuteNonQuery();
+            this.Close();
         }
 
-        
+       
+
+
+      
+
+
 
         private void FormInvoices_Load(object sender, EventArgs e)
         {
-            DataTable productsData = GetProductsData();
-
-            // Проверяем, что данные получены
-            if (productsData != null && productsData.Rows.Count > 0)
-            {
-                cbProd.Items.Clear();
-                foreach (DataRow row in productsData.Rows)
-                {
-                    string productName = row["name_prod"].ToString();
-                    cbProd.Items.Add(productName);
-                }
-                cbProd.SelectedIndex = 0;
-            }
+            
         }
     }
 }

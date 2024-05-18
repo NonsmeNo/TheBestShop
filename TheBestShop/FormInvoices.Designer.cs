@@ -31,7 +31,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpInv = new System.Windows.Forms.DateTimePicker();
             this.cbProd = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -75,12 +75,12 @@
             this.label4.TabIndex = 36;
             this.label4.Text = "Дата выписки счета-фактуры";
             // 
-            // dateTimePicker1
+            // dtpInv
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(30, 35);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 43;
+            this.dtpInv.Location = new System.Drawing.Point(30, 35);
+            this.dtpInv.Name = "dtpInv";
+            this.dtpInv.Size = new System.Drawing.Size(200, 20);
+            this.dtpInv.TabIndex = 43;
             // 
             // cbProd
             // 
@@ -175,7 +175,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbProd);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpInv);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label4);
@@ -193,7 +193,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpInv;
         private System.Windows.Forms.ComboBox cbProd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
