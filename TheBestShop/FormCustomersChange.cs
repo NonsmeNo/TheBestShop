@@ -55,7 +55,8 @@ namespace TheBestShop
 
         private void btnChange_Click(object sender, EventArgs e)
         {
-            string sql = "UPDATE Customers SET lastname=@lastname, firstname=@name, patronym=@surname, phone = @phone, address = @address WHERE id = @id";
+            string sql = "UPDATE Customers SET lastname=@lastname, firstname=@name, " +
+                "patronym=@surname, phone = @phone, address = @address WHERE id = @id";
             NpgsqlCommand cmd = new NpgsqlCommand(sql, con);
             cmd.Parameters.AddWithValue("lastname", this.tbLastname.Text);
             cmd.Parameters.AddWithValue("name", this.tbName.Text);

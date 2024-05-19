@@ -57,7 +57,6 @@ namespace TheBestShop
             int customer_id = 0;
             while (reader.Read())
             {
-                //comboBoxTour.Items.Add(reader.GetString(0));
                 if (cbCustomer.SelectedItem.ToString() == reader.GetString(1) + " " + reader.GetString(2) + " " + reader.GetString(3))
                 {
                     customer_id = Convert.ToInt32(reader.GetValue(0));
@@ -71,7 +70,6 @@ namespace TheBestShop
             int product_id = 0;
             while (reader1.Read())
             {
-                //comboBoxTour.Items.Add(reader.GetString(0));
                 if (cbProd.SelectedItem.ToString() == reader1.GetString(1))
                 {
                     product_id = Convert.ToInt32(reader1.GetValue(0));
@@ -79,7 +77,8 @@ namespace TheBestShop
             }
             reader1.Close();
 
-            string sql2 = "INSERT INTO Invoices(invoice_date, payment_date, paid, quantity, customer_id, product_id) VALUES(@invoice_date, @payment_date, @paid, @quantity, @customer_id, @product_id)";
+            string sql2 = "INSERT INTO Invoices(invoice_date, payment_date, paid, quantity, " +
+                "customer_id, product_id) VALUES(@invoice_date, @payment_date, @paid, @quantity, @customer_id, @product_id)";
             NpgsqlCommand cmd2 = new NpgsqlCommand(sql2, con);
 
             DateTime invoiceDate = this.dtpInv.Value;
@@ -95,6 +94,8 @@ namespace TheBestShop
             cmd2.ExecuteNonQuery();
             this.Close();
         }
+
+
 
        
 

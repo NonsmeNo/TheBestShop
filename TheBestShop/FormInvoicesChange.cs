@@ -105,13 +105,8 @@ namespace TheBestShop
             NpgsqlDataReader reader = cmd.ExecuteReader();
             int customer_id = 0;
             while (reader.Read())
-            {
-                //comboBoxTour.Items.Add(reader.GetString(0));
                 if (cbCustomer.SelectedItem.ToString() == reader.GetString(1) + " " + reader.GetString(2) + " " + reader.GetString(3))
-                {
                     customer_id = Convert.ToInt32(reader.GetValue(0));
-                }
-            }
             reader.Close();
 
             string sql1 = "SELECT id, name_prod FROM products";
@@ -119,29 +114,22 @@ namespace TheBestShop
             NpgsqlDataReader reader1 = cmd1.ExecuteReader();
             int product_id = 0;
             while (reader1.Read())
-            {
-                //comboBoxTour.Items.Add(reader.GetString(0));
                 if (cbProd.SelectedItem.ToString() == reader1.GetString(1))
-                {
                     product_id = Convert.ToInt32(reader1.GetValue(0));
-                }
-            }
             reader1.Close();
 
-            string sql2 = "UPDATE Invoices SET invoice_date=@invoice_date, payment_date=@payment_date, paid=@paid, quantity=@quantity, customer_id=@customer_id, product_id=@product_id WHERE id = @id";
+            string sql2 = "UPDATE Invoices SET invoice_date=@invoice_date, payment_date=@payment_date, " +
+                "paid=@paid, quantity=@quantity, customer_id=@customer_id, product_id=@product_id WHERE id = @id";
             NpgsqlCommand cmd2 = new NpgsqlCommand(sql2, con);
 
             DateTime invoiceDate = this.dtpInv.Value;
             DateTime paymentDate = invoiceDate.AddDays(20);
             cmd2.Parameters.AddWithValue("invoice_date", invoiceDate);
             cmd2.Parameters.AddWithValue("payment_date", paymentDate);
-
             cmd2.Parameters.AddWithValue("quantity", int.Parse(this.nudQuan.Value.ToString()));
             cmd2.Parameters.AddWithValue("paid", float.Parse(this.tbPaid.Text));
             cmd2.Parameters.AddWithValue("customer_id", customer_id);
             cmd2.Parameters.AddWithValue("product_id", product_id);
-
-
             int id = int.Parse(this.labelid.Text);
             Console.WriteLine(id);
             cmd2.Parameters.AddWithValue("id", id);

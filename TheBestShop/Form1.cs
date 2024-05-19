@@ -193,7 +193,7 @@ namespace TheBestShop
                 inv.payment_date AS PaymentDate,
                 p.cost_prod*inv.quantity*(100+p.nds)/100 AS Total,
                 inv.paid AS Paid,
-                (p.cost_prod*inv.quantity - inv.paid) AS Debt
+                (p.cost_prod*inv.quantity*(100+p.nds)/100 - inv.paid) AS Debt
             FROM 
                 Invoices AS inv
             JOIN Customers AS c ON inv.customer_id = c.id

@@ -34,7 +34,8 @@ namespace TheBestShop
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string sql1 = "INSERT INTO Customers(lastname, firstname, patronym, phone, address) VALUES(@lastname, @name, @surname, @phone, @address)";
+            string sql1 = "INSERT INTO Customers(lastname, firstname, patronym, phone, address)" +
+                " VALUES(@lastname, @name, @surname, @phone, @address)";
             NpgsqlCommand cmd1 = new NpgsqlCommand(sql1, con);
             cmd1.Parameters.AddWithValue("lastname", this.tbLastname.Text);
             cmd1.Parameters.AddWithValue("name", this.tbName.Text);
